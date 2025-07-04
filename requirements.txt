@@ -1,3 +1,10 @@
-streamlit
-requests
+streamlit-option-menu
+pandas==1.5.3
+streamlit==1.26.0
+matplotlib==3.6.2
+pycaret
+scikit-learn-intelex
+streamlit-folium
+openai>=1.0.0
+python-dotenv
 together
