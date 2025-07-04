@@ -10,8 +10,6 @@ import folium
 from streamlit_folium import st_folium
 from together import Together
 
-
-
 st.set_page_config(page_title='ELV', page_icon='👨‍💻', layout="centered", initial_sidebar_state="auto", menu_items={'About': "#v1tr4!"})
 st.session_state["home_viewed"] = True
 #st.sidebar.image("Picture/logo.jpeg", width=100)
