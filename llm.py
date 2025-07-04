@@ -7,6 +7,7 @@ st.title('🤖 Hugging Face LLM Chat')
 # Masukkan token Hugging Face di secrets.toml
 API_URL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2"
 headers = {"Authorization": f"Bearer {st.secrets['HF_API_KEY']}"}
+st.write(st.secrets['HF_API_KEY'])
 
 # Fungsi untuk query model Hugging Face
 def query(payload):
