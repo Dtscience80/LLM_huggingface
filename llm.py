@@ -10,9 +10,18 @@ headers = {"Authorization": f"Bearer {st.secrets['HF_API_KEY']}"}
 st.write(st.secrets['HF_API_KEY'])
 
 # Fungsi untuk query model Hugging Face
+#def query(payload):
+#    response = requests.post(API_URL, headers=headers, json=payload)
+#    return response.json()
+
 def query(payload):
     response = requests.post(API_URL, headers=headers, json=payload)
-    return response.json()
+    st.write("HTTP Status Code:", response.status_code)
+    st.write("Response Text:", response.text)
+    try:
+        return response.json()
+    except requests.exceptions.JSONDecodeError as e:
+        return {"error": f"JSON decode error: {e}"}
 
 # Inisialisasi sesi pesan
 if "messages" not in st.session_state:
@@ -47,3 +56,5 @@ if prompt := st.chat_input("Tanyakan sesuatu..."):
 
             st.markdown(reply)
             st.session_state.messages.append({"role": "assistant", "content": reply})
+
+
