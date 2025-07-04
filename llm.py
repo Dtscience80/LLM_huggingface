@@ -28,7 +28,8 @@ if prompt := st.chat_input("Tanyakan sesuatu..."):
             try:
                 response = client.chat.completions.create(
                     messages=st.session_state.messages,
-                    model="meta-llama/Llama-3-70b-chat-hf",
+                    #model="meta-llama/Llama-3-70b-chat-hf",
+                    model="meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
                     max_tokens=1024,
                     temperature=0.5,
                     stream=False,
