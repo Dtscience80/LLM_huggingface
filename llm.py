@@ -1,8 +1,8 @@
 import streamlit as st
 from together import Together
 
-st.set_page_config(page_title="💬 Together AI Chat", layout="centered")
-st.title("💬 Together AI Chat")
+st.set_page_config(page_title="💬 Xynsu AI Chat", layout="centered")
+st.title("💬 Xynsu AI Chat")
 
 # Inisialisasi Together Client
 client = Together(api_key=st.secrets["TOGETHER_API_KEY"])
